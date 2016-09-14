@@ -36,6 +36,29 @@ alias duf='du -a -h --max-depth=1 | sort -hr'
 
 alias benchmark='time \dd if=/dev/zero of=/dev/null bs=1M count=32768'
 
+#docker
+alias dc='docker-compose'
+alias dcl='docker-compose logs'
+alias dcrm='docker-compose rm'
+alias dcsrm='docker-compose stop && docker-compose rm'
+alias dcs='docker-compose stop'
+alias dcu='docker-compose up -d'
+alias dcul='docker-compose up -d && docker-compose logs'
+alias dpl='docker logs'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias drm='docker rm'
+alias drmi='docker rmi'
+
+#vagrant
+alias vstatus='vagrant global-status'
+alias vssh='vagrant ssh'
+alias vdf='vagrant destroy -f'
+alias vss='vagrant snapshot save '
+alias vsr='vagrant snapshot restore '
+alias vsl='vagrant snapshot list'
+alias vsd='vagrant snapshot delete'
+
 extract () {
    if [ -f $1 ] ; then
        case $1 in
